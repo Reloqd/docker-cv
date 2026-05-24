@@ -559,6 +559,12 @@
     .project-badge.infra {
       background: rgba(79,195,247,0.15); color: var(--accent);
     }
+    .project-badge.monitoring {
+      background: rgba(255,167,38,0.15); color: #ffa726;
+    }
+    .project-thumb.monitoring {
+      background: linear-gradient(135deg, rgba(255,167,38,0.15), rgba(239,83,80,0.15));
+    }
     .project-title {
       font-size: 18px; font-weight: 700;
       margin-bottom: 6px;
@@ -1102,6 +1108,21 @@
       </div>
     </a>
 
+    <div class="project-card" style="cursor:default;">
+      <div class="project-thumb monitoring">
+        <span style="font-size:48px;">📊</span>
+      </div>
+      <div class="project-body">
+        <span class="project-badge monitoring" data-i18n="portfolio.badge.monitoring">Monitoring</span>
+        <div class="project-title">Stack Observabilite</div>
+        <p class="project-desc" data-i18n="portfolio.desc4">Stack d'observabilite complete : Prometheus, Grafana, Loki, Tempo, Alertmanager. Pipeline OpenTelemetry Collector. Deploiement GitOps via Komodo.</p>
+        <div class="project-stack">
+          <span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Tempo</span><span>OTel</span><span>Komodo</span>
+        </div>
+        <span class="project-link" style="opacity:0.5;" data-i18n="portfolio.link.wip">En cours de realisation...</span>
+      </div>
+    </div>
+
   </div>
   <div class="portfolio-countdown">
     <div class="countdown-label" data-i18n="portfolio.wip">D'autres projets en cours de redaction...</div>
@@ -1383,11 +1404,13 @@ var translations = {
     'contact.nat':'<b>Nationalite</b> Francaise','contact.permit':'<b>Permis</b> B',
     'contact.lang':'<b>Langues</b> Francais (bilingue), Anglais (notions)',
     'portfolio.title':'Mes <span>projets</span>','portfolio.sub':'Infrastructure, automatisation et experimentations',
-    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source',
+    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source','portfolio.badge.monitoring':'Monitoring',
     'portfolio.desc1':'Infrastructure complete IaC : Terraform, Ansible, DNS, clusters Kubernetes, gateway et routage. Gestion multi-environnements.',
     'portfolio.desc2':'Site CV interactif single-page : reseau neuronal de competences, terminal interactif, switch FR/EN, status page live. Zero dependance.',
     'portfolio.desc3':'Stack Docker homelab : Traefik reverse proxy, Cloudflare Tunnel, services auto-decouverts. Deploiement via docker-compose.',
+    'portfolio.desc4':'Stack d\'observabilite complete : Prometheus, Grafana, Loki, Tempo, Alertmanager. Pipeline OpenTelemetry Collector. Deploiement GitOps via Komodo.',
     'portfolio.link.live':'Voir le projet &#8594;',
+    'portfolio.link.wip':'En cours de realisation...',
     'portfolio.cta':'Explorer tous les projets &#8594;',
     'portfolio.wip':'D\'autres projets en cours de redaction...',
     'status.title':'Mes <span>services</span>','status.sub':'Statut en temps reel de mon infrastructure',
@@ -1448,11 +1471,13 @@ var translations = {
     'contact.nat':'<b>Nationality</b> French','contact.permit':'<b>License</b> B',
     'contact.lang':'<b>Languages</b> French (native), English (basic)',
     'portfolio.title':'My <span>projects</span>','portfolio.sub':'Infrastructure, automation and experiments',
-    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source',
+    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source','portfolio.badge.monitoring':'Monitoring',
     'portfolio.desc1':'Complete IaC infrastructure: Terraform, Ansible, DNS, Kubernetes clusters, gateway and routing. Multi-environment management.',
     'portfolio.desc2':'Interactive single-page CV: neural network skills graph, interactive terminal, FR/EN switch, live status page. Zero dependencies.',
     'portfolio.desc3':'Docker homelab stack: Traefik reverse proxy, Cloudflare Tunnel, auto-discovered services. Deployed via docker-compose.',
+    'portfolio.desc4':'Full observability stack: Prometheus, Grafana, Loki, Tempo, Alertmanager. OpenTelemetry Collector pipeline. GitOps deployment via Komodo.',
     'portfolio.link.live':'View project &#8594;',
+    'portfolio.link.wip':'Work in progress...',
     'portfolio.cta':'Explore all projects &#8594;',
     'portfolio.wip':'More projects coming soon...',
     'status.title':'My <span>services</span>','status.sub':'Real-time status of my infrastructure',
