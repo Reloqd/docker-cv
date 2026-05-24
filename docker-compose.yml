@@ -1,0 +1,16 @@
+services:
+  nginx:
+    build: .
+    container_name: cv-nginx
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.cv.rule=Host(`cv.theobs.fr`)"
+      - "traefik.http.routers.cv.entrypoints=web"
+      - "traefik.http.services.cv.loadbalancer.server.port=80"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
