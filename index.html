@@ -565,6 +565,12 @@
     .project-thumb.monitoring {
       background: linear-gradient(135deg, rgba(255,167,38,0.15), rgba(239,83,80,0.15));
     }
+    .project-badge.gitops {
+      background: rgba(0,230,118,0.15); color: var(--accent3);
+    }
+    .project-thumb.gitops {
+      background: linear-gradient(135deg, rgba(0,230,118,0.15), rgba(79,195,247,0.15));
+    }
     .project-title {
       font-size: 18px; font-weight: 700;
       margin-bottom: 6px;
@@ -1080,7 +1086,7 @@
 
     <a href="https://projects.theobs.fr/cv" target="_blank" rel="noopener" class="project-card">
       <div class="project-thumb cv">
-        <img src="/cv-thumb.png" alt="CV Portfolio" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(79,195,247,0.4));">
+        <img src="/images/cv-thumb.png" alt="CV Portfolio" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(79,195,247,0.4));">
       </div>
       <div class="project-body">
         <span class="project-badge opensource" data-i18n="portfolio.badge.opensource">Open Source</span>
@@ -1095,7 +1101,7 @@
 
     <a href="https://projects.theobs.fr/terraform" target="_blank" rel="noopener" class="project-card">
       <div class="project-thumb infra">
-        <img src="/terraform-thumb.png" alt="Terraform Modules" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(124,77,255,0.4));">
+        <img src="/images/terraform-thumb.png" alt="Terraform Modules" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(124,77,255,0.4));">
       </div>
       <div class="project-body">
         <span class="project-badge infra" data-i18n="portfolio.badge.infra">Infrastructure</span>
@@ -1103,6 +1109,21 @@
         <p class="project-desc" data-i18n="portfolio.desc1">Modules Terraform reutilisables pour OVHcloud : Kubernetes manage, reseau prive, Valkey. Valides, documentes, avec exemples.</p>
         <div class="project-stack">
           <span>Terraform</span><span>OVHcloud</span><span>Kubernetes</span><span>Valkey</span>
+        </div>
+        <span class="project-link" data-i18n="portfolio.link.live">Voir l'etude de cas &#8594;</span>
+      </div>
+    </a>
+
+    <a href="https://projects.theobs.fr/komodo" target="_blank" rel="noopener" class="project-card">
+      <div class="project-thumb gitops">
+        <img src="/images/komodo-thumb.png" alt="Komodo GitOps" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(0,230,118,0.4));">
+      </div>
+      <div class="project-body">
+        <span class="project-badge gitops" data-i18n="portfolio.badge.gitops">GitOps</span>
+        <div class="project-title">Komodo GitOps</div>
+        <p class="project-desc" data-i18n="portfolio.desc5">Deploiement automatise via Komodo : push GitHub → webhook → build et redeploy. Stacks Docker gerees en GitOps, zero intervention manuelle.</p>
+        <div class="project-stack">
+          <span>Komodo</span><span>Docker</span><span>GitHub</span><span>Webhooks</span><span>Traefik</span><span>Cloudflare</span>
         </div>
         <span class="project-link" data-i18n="portfolio.link.live">Voir l'etude de cas &#8594;</span>
       </div>
@@ -1404,11 +1425,12 @@ var translations = {
     'contact.nat':'<b>Nationalite</b> Francaise','contact.permit':'<b>Permis</b> B',
     'contact.lang':'<b>Langues</b> Francais (bilingue), Anglais (notions)',
     'portfolio.title':'Mes <span>projets</span>','portfolio.sub':'Infrastructure, automatisation et experimentations',
-    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source','portfolio.badge.monitoring':'Monitoring',
+    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source','portfolio.badge.monitoring':'Monitoring','portfolio.badge.gitops':'GitOps',
     'portfolio.desc1':'Infrastructure complete IaC : Terraform, Ansible, DNS, clusters Kubernetes, gateway et routage. Gestion multi-environnements.',
     'portfolio.desc2':'Site CV interactif single-page : reseau neuronal de competences, terminal interactif, switch FR/EN, status page live. Zero dependance.',
     'portfolio.desc3':'Stack Docker homelab : Traefik reverse proxy, Cloudflare Tunnel, services auto-decouverts. Deploiement via docker-compose.',
     'portfolio.desc4':'Stack d\'observabilite complete : Prometheus, Grafana, Loki, Tempo, Alertmanager. Pipeline OpenTelemetry Collector. Deploiement GitOps via Komodo.',
+    'portfolio.desc5':'Deploiement automatise via Komodo : push GitHub → webhook → build et redeploy. Stacks Docker gerees en GitOps, zero intervention manuelle.',
     'portfolio.link.live':'Voir le projet &#8594;',
     'portfolio.link.wip':'En cours de realisation...',
     'portfolio.cta':'Explorer tous les projets &#8594;',
@@ -1471,11 +1493,12 @@ var translations = {
     'contact.nat':'<b>Nationality</b> French','contact.permit':'<b>License</b> B',
     'contact.lang':'<b>Languages</b> French (native), English (basic)',
     'portfolio.title':'My <span>projects</span>','portfolio.sub':'Infrastructure, automation and experiments',
-    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source','portfolio.badge.monitoring':'Monitoring',
+    'portfolio.badge.infra':'Infrastructure','portfolio.badge.opensource':'Open Source','portfolio.badge.monitoring':'Monitoring','portfolio.badge.gitops':'GitOps',
     'portfolio.desc1':'Complete IaC infrastructure: Terraform, Ansible, DNS, Kubernetes clusters, gateway and routing. Multi-environment management.',
     'portfolio.desc2':'Interactive single-page CV: neural network skills graph, interactive terminal, FR/EN switch, live status page. Zero dependencies.',
     'portfolio.desc3':'Docker homelab stack: Traefik reverse proxy, Cloudflare Tunnel, auto-discovered services. Deployed via docker-compose.',
     'portfolio.desc4':'Full observability stack: Prometheus, Grafana, Loki, Tempo, Alertmanager. OpenTelemetry Collector pipeline. GitOps deployment via Komodo.',
+    'portfolio.desc5':'Automated deployment via Komodo: GitHub push → webhook → build and redeploy. Docker stacks managed via GitOps, zero manual intervention.',
     'portfolio.link.live':'View project &#8594;',
     'portfolio.link.wip':'Work in progress...',
     'portfolio.cta':'Explore all projects &#8594;',
@@ -1564,7 +1587,7 @@ function setLanguage(lang) {
 (function(){
   var canvas=document.getElementById('neuralCanvas');
   var ctx=canvas.getContext('2d');
-  // Categories: 0=Orchestration, 1=IaC, 2=Systeme, 3=CI/CD, 4=Middleware, 5=Monitoring
+  // Categories: 0=Orchestration, 1=IaC, 2=Systeme, 3=CI/CD, 4=Middleware, 5=Monitoring, 6=Cloud, 7=GitOps
   var skills=[
     // Orchestration (haut-gauche)
     {name:'Kubernetes',sub:'Helm / Docker',pct:56,group:0},
@@ -1587,7 +1610,9 @@ function setLanguage(lang) {
     {name:'ProxySQL',sub:'MariaDB',pct:25,group:4},
     // Monitoring & Infra (bas-droite)
     {name:'ELK',sub:'Datadog',pct:45,group:5},
-    {name:'VMware',sub:'Proxmox',pct:45,group:5}
+    {name:'VMware',sub:'Proxmox',pct:45,group:5},
+    // GitOps (bas-centre)
+    {name:'Komodo',sub:'GitOps Deploy',pct:60,group:7}
   ];
   var connections=[
     // Orchestration interne
@@ -1617,7 +1642,13 @@ function setLanguage(lang) {
     // IaC ↔ Orchestration
     [4,0],
     // VMware ↔ Linux
-    [14,5]
+    [14,5],
+    // GitOps ↔ Docker
+    [15,1],
+    // GitOps ↔ CI/CD
+    [15,7],
+    // GitOps ↔ Monitoring
+    [15,13]
   ];
 
   // Positions par categorie (en % du canvas)
@@ -1628,16 +1659,17 @@ function setLanguage(lang) {
     3: {cx:0.50, cy:0.18},  // CI/CD centre-haut
     4: {cx:0.30, cy:0.78},  // Middleware bas-gauche
     5: {cx:0.72, cy:0.75},  // Monitoring bas-droite
-    6: {cx:0.50, cy:0.50}   // Cloud centre
+    6: {cx:0.50, cy:0.50},  // Cloud centre
+    7: {cx:0.50, cy:0.82}   // GitOps bas-centre
   };
   var categoryLabels = {
-    0:'Orchestration', 1:'IaC', 2:'Systeme', 3:'CI/CD', 4:'Middleware', 5:'Monitoring', 6:'Cloud'
+    0:'Orchestration', 1:'IaC', 2:'Systeme', 3:'CI/CD', 4:'Middleware', 5:'Monitoring', 6:'Cloud', 7:'GitOps'
   };
 
   var nodes=[];
   var hovered=-1;
   var mouseX=-1000,mouseY=-1000;
-  var colors=['#4fc3f7','#7c4dff','#00e676','#ff9800','#e91e63','#26c6da','#ffa726'];
+  var colors=['#4fc3f7','#7c4dff','#00e676','#ff9800','#e91e63','#26c6da','#ffa726','#66bb6a'];
 
   function resize(){
     canvas.width=canvas.offsetWidth;
@@ -1829,7 +1861,7 @@ function setLanguage(lang) {
         '<span class="highlight">Steven Maulny</span>\n<span class="accent">DevOps Engineer</span> | Rennes, France\n3 years of experience — AWS, Kubernetes, IaC\nCurrently at <span class="accent2">Skaleet</span> (fintech)';
     },
     skills:function(){
-      return '<span class="accent">Linux</span>       ████████████████████\n<span class="accent">Ansible</span>     ████████████████████\n<span class="accent">Terraform</span>   █████████████████░░░\n<span class="accent">Bash</span>        ████████████████░░░░\n<span class="accent">GitLab CI</span>   ████████████░░░░░░░░\n<span class="accent">Kubernetes</span>  ███████████░░░░░░░░░\n<span class="accent">Docker</span>      ███████████░░░░░░░░░\n<span class="accent">AWS</span>         ██████████░░░░░░░░░░\n<span class="accent">ELK</span>         █████████░░░░░░░░░░░';
+      return '<span class="accent">Linux</span>       ████████████████████\n<span class="accent">Ansible</span>     ████████████████████\n<span class="accent">Terraform</span>   █████████████████░░░\n<span class="accent">Bash</span>        ████████████████░░░░\n<span class="accent">GitLab CI</span>   ████████████░░░░░░░░\n<span class="accent">Komodo</span>      ████████████░░░░░░░░\n<span class="accent">Kubernetes</span>  ███████████░░░░░░░░░\n<span class="accent">Docker</span>      ███████████░░░░░░░░░\n<span class="accent">AWS</span>         ██████████░░░░░░░░░░\n<span class="accent">ELK</span>         █████████░░░░░░░░░░░';
     },
     experience:function(){
       return currentLang==='fr'?
