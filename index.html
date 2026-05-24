@@ -1727,13 +1727,6 @@ function setLanguage(lang) {
       ctx.textAlign='center';
       ctx.fillText(n.skill.name,n.x,n.y-r-8);
 
-      // percentage
-      if(isHovered){
-        ctx.fillStyle=n.color;
-        ctx.font='bold 16px JetBrains Mono, monospace';
-        ctx.fillText(n.skill.pct+'%',n.x,n.y+6);
-      }
-
       // sub label on hover
       if(isHovered){
         ctx.fillStyle='rgba(136,136,170,0.9)';
@@ -1811,7 +1804,7 @@ function setLanguage(lang) {
         '<span class="highlight">Steven Maulny</span>\n<span class="accent">DevOps Engineer</span> | Rennes, France\n3 years of experience — AWS, Kubernetes, IaC\nCurrently at <span class="accent2">Skaleet</span> (fintech)';
     },
     skills:function(){
-      return '<span class="accent">Linux</span>       ████████████████████ 90%\n<span class="accent">Ansible</span>     ████████████████████ 90%\n<span class="accent">Terraform</span>   █████████████████░░░ 85%\n<span class="accent">Bash</span>        ████████████████░░░░ 80%\n<span class="accent">GitLab CI</span>   ████████████░░░░░░░░ 60%\n<span class="accent">Kubernetes</span>  ███████████░░░░░░░░░ 56%\n<span class="accent">Docker</span>      ███████████░░░░░░░░░ 56%\n<span class="accent">AWS</span>         ██████████░░░░░░░░░░ 50%\n<span class="accent">ELK</span>         █████████░░░░░░░░░░░ 45%';
+      return '<span class="accent">Linux</span>       ████████████████████\n<span class="accent">Ansible</span>     ████████████████████\n<span class="accent">Terraform</span>   █████████████████░░░\n<span class="accent">Bash</span>        ████████████████░░░░\n<span class="accent">GitLab CI</span>   ████████████░░░░░░░░\n<span class="accent">Kubernetes</span>  ███████████░░░░░░░░░\n<span class="accent">Docker</span>      ███████████░░░░░░░░░\n<span class="accent">AWS</span>         ██████████░░░░░░░░░░\n<span class="accent">ELK</span>         █████████░░░░░░░░░░░';
     },
     experience:function(){
       return currentLang==='fr'?
